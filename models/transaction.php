@@ -9,7 +9,7 @@ class Customer {
 
     public function addTransaction($data) {
        // Prepare query
-       $this->db->query('INSERT INTO customers (id, customer_id, product, amount, currency, status) VALUES(:id, :customer_id, :product, :amount, :currency, :status)');
+       $this->db->query('INSERT INTO transactions (id, customer_id, product, amount, currency, status) VALUES(:id, :customer_id, :product, :amount, :currency, :status)');
 
        // Bind values
        $this->db->bind(':id', $data['id']);

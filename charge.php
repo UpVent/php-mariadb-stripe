@@ -3,6 +3,7 @@ require_once('vendor/autoload.php');
 require_once('config/db.php');
 require_once('lib/pdo_db.php');
 require_once('models/customer.php');
+require_once('models/transaction.php');
 
 \Stripe\Stripe::setApiKey('sk_test_UqbYcqyb1MhZbYxq8XvuXn7h00imeKMLGE');
 
@@ -39,6 +40,21 @@ $customer = new Customer();
 
 // Añadir cliente
 $customer->addCustomer($customerData);
+
+$transactionData = [
+    'id' => $charge->id,
+    'customer_id' => $charge->customer,
+    'product' => $charge->description,
+    'amount' => $charge->amount,
+    'currency' => $charge->currency,
+    'status' => $charge-status,
+];
+
+// Instanciar la transacción
+$transaction = new Transaction();
+
+// Añadir cliente
+$transaction->addTransaction($transactionData);
 
 // Si el cliente pagó correctamente
 header('Location: success.php?tid='.$charge->id.'&product='.$charge->description);
