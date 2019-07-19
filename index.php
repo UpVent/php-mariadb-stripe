@@ -9,7 +9,7 @@
         <title> Pay Page </title>
     </head>
     <body>
-        <form action="/charge">
+        <form action="/charge.php">
             <div class="form-row">
                 <label for="card-element">
                     Credit or debit card
