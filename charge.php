@@ -18,8 +18,11 @@ $customer = \Stripe\Customer::create(array(
 ));
 
 $charge = \Stripe\Charge::create(array(
-    "amount" => 5000,
-    "currency" => MXN,
+    "amount" => 3102,
+    "currency" => USD,
     "description" => "My Arms Your Hearse",
     "customer" => $customer -> id
 ));
+
+// Si el cliente pagó correctamente
+header('Location: success.php?tid='.$charge->id.'&product='.$charge->description);
