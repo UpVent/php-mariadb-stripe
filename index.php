@@ -21,6 +21,9 @@
                 <!-- Used to display form errors -->
                 <div id="card-errors" role="alert"></div>
             </div>
+            <button>Submit Payment</button>
         </form>
+
+        <script src="https://js.stripe.com/v3/"></script>
     </body>
 </html>
