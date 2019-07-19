@@ -16,6 +16,7 @@
     </head>
     <body>
         <div class="container">
+            <h2 class="my-4 text-center">Opeth - My Arms Your Hearse Album<h2>
             <form action="/charge.php" method="POST" id="payment-form">
                 <div class="form-row">
                     <div id="card-element" class="form-control">
