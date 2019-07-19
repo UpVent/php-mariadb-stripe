@@ -25,4 +25,12 @@ class Customer {
            return false;
        }
     }
+
+    public function getGustomers() {
+       $this->db->query('SELECT * FROM customers ORDER BY created_at DESC');
+
+       $results = $this->db->resultset();
+
+       return $results;
+    }
 }
