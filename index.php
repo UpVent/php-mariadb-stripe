@@ -19,6 +19,9 @@
             <h2 class="my-4 text-center">Opeth - My Arms Your Hearse Album<h2>
             <form action="/charge.php" method="POST" id="payment-form">
                 <div class="form-row">
+                    <input type="text" name="first_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="First Name">
+                    <input type="text" name="last_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Last Name">
+                    <input type="email" name="email" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Email Address">
                     <div id="card-element" class="form-control">
                         <!-- A Stripe Element will be inserted here. -->
                     </div>
