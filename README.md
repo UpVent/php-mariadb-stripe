@@ -2,7 +2,7 @@
 a simple PHP + MariaDB + Stripe payments application.
 
 # IMPORTANT!
-Make sure to replace the stripe API keys in `charge.php` and `index.php` and use
+Make sure to replace the stripe API keys in `js/charge.js` and `charge.php` and use
 your own to ensure proper working. (If you don't you won't see any visible 
 changes in your stripe dashboard)
 
