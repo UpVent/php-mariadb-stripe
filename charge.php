@@ -10,3 +10,6 @@ $first_name = $POST['first_name'];
 $last_name = $POST['last_name'];
 $email = $POST['email'];
 $token = $POST['stripeToken'];
+
+// Crear un cliente en Stripe
+$customer = \Stripe\Customer::create(array());
