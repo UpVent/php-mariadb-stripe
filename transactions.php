@@ -1,14 +1,14 @@
 <?php
 require_once('config/db.php');
 require_once('lib/pdo_db.php');
-require_once('models/Customer.php');
+require_once('models/Transactions.php');
 
 
-// Instanciar un cliente
-$customer = new Customer();
+// Instanciar una transacción
+$trandaction = new Transaction();
 
 // Obtener un cliente
-$customers = $customer->getCustomers();
+$transactions = $customer->getTransactions();
 ?>
 
 <!DOCTYPE html>
@@ -23,32 +23,34 @@ $customers = $customer->getCustomers();
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
         <!-- Material Design Bootstrap -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/css/mdb.min.css" rel="stylesheet">
-        <title> Ver Clientes </title>
+        <title> Ver Transacciones </title>
     </head>
     <body>
         <div class="container mt-4">
             <div class="btn-group" role="group">
-                <a class="btn btn-primary" href="customers.php">Customers</a>
-                <a class="btn btn-secondary" href="transactions.php">Transactions</a>
+                <a class="btn btn-secondary" href="customers.php">Customers</a>
+                <a class="btn btn-primary" href="transactions.php">Transactions</a>
             </div>
             <hr>
-            <h2>Clientes</h2>
+            <h2>Transacciones</h2>
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>ID del cliente</th>
-                        <th>Nombre</th>
-                        <th>Email</th>
+                        <th>ID de Transacción</th>
+                        <th>Cliente</th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
                         <th>Fecha</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($customers as $c): ?>
+                    <?php foreach($transactions as $t): ?>
                         <tr>
-                            <td><?php echo $c->id; ?></td>
-                            <td><?php echo $c->first_name; ?> <?php echo $c->last_name; ?></td>
-                            <td><?php echo $c->email; ?></td>
-                            <td><?php echo $c->created_at; ?></td>
+                            <td><?php echo $t->id; ?></td>
+                            <td><?php echo $t->customer_id; ?></td>
+                            <td><?php echo $t->product; ?></td>
+                            <td><?php echo $t->amount; ?></td>
+                            <td><?php echo $t->created_at; ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
