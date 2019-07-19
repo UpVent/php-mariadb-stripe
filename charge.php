@@ -2,8 +2,8 @@
 require_once('vendor/autoload.php');
 require_once('config/db.php');
 require_once('lib/pdo_db.php');
-require_once('models/customer.php');
-require_once('models/transaction.php');
+require_once('models/Customer.php');
+require_once('models/Transaction.php');
 
 \Stripe\Stripe::setApiKey('sk_test_UqbYcqyb1MhZbYxq8XvuXn7h00imeKMLGE');
 

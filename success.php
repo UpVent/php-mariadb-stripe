@@ -27,7 +27,7 @@ if (!empty($_GET['tid']) && !empty($_GET['product'])) {
         <div class="container mt-4">
             <h2>Gracias por comprar: <?php echo $product; ?></h2>
             <hr>
-            <p> Tu ID de compra es: <?php echo $tid: ?></p>
+            <p> Tu ID de compra es: <?php echo $tid; ?></p>
             <p> Revisa tu correo para más información </p>
             <p><a class="btn btn-light mt-2" href="index.php">Regresar</a></p>
         </div>

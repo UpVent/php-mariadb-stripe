@@ -1,7 +1,7 @@
 <?php
 require_once('config/db.php');
 require_once('lib/pdo_db.php');
-require_once('models/customer.php');
+require_once('models/Customer.php');
 
 
 // Instanciar un cliente
@@ -27,6 +27,11 @@ $customers = $customer->getCustomers();
     </head>
     <body>
         <div class="container mt-4">
+            <div class="btn-group" role="group">
+                <a class="btn btn-primary" href="customers.php">Customers</a>
+                <a class="btn btn-secondary" href="transactions.php">Transactions</a>
+            </div>
+            <hr>
             <h2>Clientes</h2>
             <table class="table table-striped">
                 <thead>
@@ -48,6 +53,8 @@ $customers = $customer->getCustomers();
                     <?php endforeach; ?>
                 </tbody>
             </table>
+            <br>
+            <p><a href="index.php">Regresar</a></p>
         </div>
     </body>
 </html>
