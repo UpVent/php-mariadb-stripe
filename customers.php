@@ -37,6 +37,16 @@ $customers = $customer->getCustomers();
                         <th>Fecha</th>
                     </tr>
                 </thead>
+                <tbody>
+                    <?php foreach($customers as $c): ?>
+                        <tr>
+                            <td><?php echo $c->id; ?></td>
+                            <td><?php echo $c->first_name; ?> <?php echo $c->last_name; ?></td>
+                            <td><?php echo $c->email; ?></td>
+                            <td><?php echo $c->created_at; ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
             </table>
         </div>
     </body>
