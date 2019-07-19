@@ -5,10 +5,10 @@ require_once('models/Transaction.php');
 
 
 // Instanciar una transacción
-$trandaction = new Transaction();
+$transaction = new Transaction();
 
 // Obtener un cliente
-$transactions = $customer->getTransactions();
+$transactions = $transaction->getTransactions();
 ?>
 
 <!DOCTYPE html>
