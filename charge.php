@@ -2,6 +2,7 @@
 require_once('vendor/autoload.php');
 require_once('config/db.php');
 require_once('lib/pdo_db.php');
+require_once('models/customer.php');
 
 \Stripe\Stripe::setApiKey('sk_test_UqbYcqyb1MhZbYxq8XvuXn7h00imeKMLGE');
 
@@ -25,6 +26,19 @@ $charge = \Stripe\Charge::create(array(
     "description" => "My Arms Your Hearse",
     "customer" => $customer -> id
 ));
+
+$customerData = [
+    'id' => $charge->customer,
+    'first_name' => $first_name,
+    'last_name' => $last_name,
+    'email' => $email
+];
+
+// Instanciar el cliente
+$customer = new Customer();
+
+// Añadir cliente
+$customer->addCustomer($customerData);
 
 // Si el cliente pagó correctamente
 header('Location: success.php?tid='.$charge->id.'&product='.$charge->description);
