@@ -22,6 +22,8 @@ var style = {
   }
 };
 
+// Style button with material bootstrap
+
 // Create an instance of the card Element.
 var card = elements.create('card', {style: style});
 

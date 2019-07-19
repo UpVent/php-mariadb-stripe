@@ -16,11 +16,8 @@
     </head>
     <body>
         <div class="container">
-            <form action="/charge.php">
+            <form action="/charge.php" method="POST" id="payment-form">
                 <div class="form-row">
-                    <label for="card-element">
-                        Credit or debit card
-                    </label>
                     <div id="card-element" class="form-control">
                         <!-- A Stripe Element will be inserted here. -->
                     </div>
