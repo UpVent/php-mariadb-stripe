@@ -1,7 +1,7 @@
 <?php
 require_once('config/db.php');
 require_once('lib/pdo_db.php');
-require_once('models/Transactions.php');
+require_once('models/Transaction.php');
 
 
 // Instanciar una transacción
